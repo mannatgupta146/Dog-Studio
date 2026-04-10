@@ -1,5 +1,6 @@
 import React from 'react'
 import { Canvas, useThree } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 
 const Dog = () => {
 
@@ -8,10 +9,13 @@ const Dog = () => {
   })
 
   return (
-      <mesh>
-          <meshBasicMaterial color={0xff0000} />
-          <boxGeometry args={[1, 1, 1]} />
-      </mesh>
+      <>
+        <mesh>
+            <meshBasicMaterial color={0xff0000} />
+            <boxGeometry args={[1, 1, 1]} />
+        </mesh>
+        <OrbitControls/>
+      </>
   )
 }
 
