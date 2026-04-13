@@ -8,20 +8,26 @@ const Dog = () => {
 
   const model = useGLTF('/model/dog.drc.glb')
   useThree(({camera, scene, gl}) => {
-    camera.position.z = 0.75
+    camera.position.z = 0.75,
+    gl.toneMapping = THREE.ReinhardToneMapping,
+    gl.outputColorSpace = THREE.SRGBColorSpace
   })
 
-  const textures = useTexture({
-    normalMap: "/dog_normals.jpg"
+  const [normalMap, sampleMatCap] = useTexture(["/dog_normals.jpg", "/matcap/mat-2.png"])
+  .map(texture=> {
+    texture.flipY = false
+    texture.colorSpace = THREE.SRGBColorSpace
+    return texture
   })
 
-  textures.normalMap.flipY = false
+  const dogMaterial = new THREE.MeshMatcapMaterial({
+    normalMap: normalMap,
+    matcap: sampleMatCap
+  })
 
   model.scene.traverse((child) => {
     if(child.name.includes('DOG')){
-      child.material = new THREE.MeshMatcapMaterial({
-        normalMap: textures.normalMap,
-      })
+      child.material = dogMaterial
     }
   })
 
