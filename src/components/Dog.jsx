@@ -1,17 +1,25 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
-import { OrbitControls, useGLTF, useTexture } from '@react-three/drei'
+import { OrbitControls, useGLTF, useTexture, useAnimations } from '@react-three/drei'
 import { DirectionalLight } from 'three'
 
 const Dog = () => {
 
   const model = useGLTF('/model/dog.drc.glb')
+
   useThree(({camera, scene, gl}) => {
     camera.position.z = 0.75,
     gl.toneMapping = THREE.ReinhardToneMapping,
     gl.outputColorSpace = THREE.SRGBColorSpace
   })
+
+  const {actions} = useAnimations(model.animations, model.scene)
+
+  useEffect(() => {
+    actions["Take 001"].play()
+  }, [actions])
+  
 
   const [normalMap, sampleMatCap] = useTexture(["/dog_normals.jpg", "/matcap/mat-2.png"])
   .map(texture=> {
