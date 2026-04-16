@@ -2,7 +2,12 @@ import React, {useEffect} from 'react'
 import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
 import { OrbitControls, useGLTF, useTexture, useAnimations } from '@react-three/drei'
-import { DirectionalLight } from 'three'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(useGSAP)
+gsap.registerPlugin(ScrollTrigger)
 
 const Dog = () => {
 
@@ -54,6 +59,19 @@ const Dog = () => {
     }
   })
 
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#section1",
+        start: "top top",
+        endTrigger: "#section3",
+        end: "bottom bottom",
+        scrub: 1,
+        markers: true
+      }
+    })
+
+  }, [])
 
   return (
       <>

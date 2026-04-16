@@ -14,7 +14,6 @@ main{
 }
 
 section{
-    color: antiquewhite;
     min-height: 100vh;
     border: 1px solid white;
     position: relative;
