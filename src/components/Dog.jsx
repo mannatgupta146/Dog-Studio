@@ -30,7 +30,6 @@ const Dog = () => {
 
   const [branchMap, branchNormalMap] = useTexture(["/branches_diffuse.jpeg", "/branches_normals.jpeg"])
   .map(texture=> {
-    texture.flipY = true
     texture.colorSpace = THREE.SRGBColorSpace
     return texture
   })
