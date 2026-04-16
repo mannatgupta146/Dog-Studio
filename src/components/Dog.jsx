@@ -21,9 +21,16 @@ const Dog = () => {
   }, [actions])
   
 
-  const [normalMap, sampleMatCap, branchMap, branchNormalMap] = useTexture(["/dog_normals.jpg", "/matcap/mat-2.png", "/branches_diffuse.jpeg"])
+  const [normalMap, sampleMatCap] = useTexture(["/dog_normals.jpg", "/matcap/mat-2.png"])
   .map(texture=> {
     texture.flipY = false
+    texture.colorSpace = THREE.SRGBColorSpace
+    return texture
+  })
+
+  const [branchMap, branchNormalMap] = useTexture(["/branches_diffuse.jpeg", "/branches_normals.jpeg"])
+  .map(texture=> {
+    texture.flipY = true
     texture.colorSpace = THREE.SRGBColorSpace
     return texture
   })
