@@ -57,9 +57,9 @@ const Dog = () => {
 
   return (
       <>
-      <primitive object={model.scene} position={[0.2, -0.5, 0]} rotation={[0, Math.PI/3.8, 0]}/>
+      <primitive object={model.scene} position={[0.2, -0.5, 0]} rotation={[0, Math.PI/5, 0]}/>
       <directionalLight position={[0, 5, 5]} intensity={10} color="#ffffff" />
-      <OrbitControls/>
+      {/* <OrbitControls/> */}
       </>
   )
 }
