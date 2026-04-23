@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
 import { OrbitControls, useGLTF, useTexture, useAnimations } from '@react-three/drei'
@@ -14,7 +14,7 @@ const Dog = () => {
   const model = useGLTF('/model/dog.drc.glb')
 
   useThree(({camera, scene, gl}) => {
-    camera.position.z = 0.75,
+    camera.position.z = 0.55,
     gl.toneMapping = THREE.ReinhardToneMapping,
     gl.outputColorSpace = THREE.SRGBColorSpace
   })
@@ -49,7 +49,6 @@ const Dog = () => {
     map: branchMap
   })
 
-
   model.scene.traverse((child) => {
     if(child.name.includes('DOG')){
       child.material = dogMaterial
@@ -58,6 +57,8 @@ const Dog = () => {
       child.material = branchMaterial
     }
   })
+
+  const dogModel = useRef(model)
 
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -70,6 +71,23 @@ const Dog = () => {
         markers: true
       }
     })
+
+    tl.to(dogModel.current.scene.position, {
+      z: "-=0.4",
+      y: "+=0.05"
+    })
+    .to(dogModel.current.scene.rotation, {
+      x: `+=${Math.PI/15}`,
+    })
+    .to(dogModel.current.scene.rotation, {
+      y: `-=${Math.PI* 9/10}`,
+      x: `+=${Math.PI/15}`
+    }, "third")
+    .to(dogModel.current.scene.position, {
+      x: "-=0.4",
+      z: "+=0.2",
+      y: "-=0.05"
+    }, "third")
 
   }, [])
 
