@@ -53,6 +53,14 @@ const App = () => {
             <i className="ri-menu-3-fill"></i>
           </div>
         </nav>
+
+        <div className="middle">
+          <div className="left">
+            <h1>We <br /> Make <br />Good <br />Shit</h1>
+          </div>
+          <div className="right"></div>
+        </div>
+
       </section>
 
       <section id="section2"><h1>Section 2</h1></section>

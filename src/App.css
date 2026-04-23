@@ -41,4 +41,24 @@ section{
             height: auto;
         }
     }
+
+    .middle{
+        display: flex;
+
+        .left, .right{
+            width: 50%;
+        }
+
+        .left{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-block: 4rem;
+        }
+
+        h1{
+            font-size: 6rem;
+            line-height: 0.8;
+        }
+    }
 }
