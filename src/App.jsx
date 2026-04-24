@@ -8,6 +8,17 @@ const App = () => {
   return (
     <>
     <main>
+
+      <div className="images">
+        <img id="tomorrowland" src="./images/tomorrowland.png" alt="" />
+        <img id="navy-pier" src="./images/navy-pier.png" alt="" />
+        <img id="msi-chicago" src="./images/msi-chicago.png" alt="" />
+        <img id="phone" src="./images/phone.png" alt="" />
+        <img id="kikk" src="./images/kikk.png" alt="" />
+        <img id="kennedy" src="./images/kennedy.png" alt="" />
+        <img id="opera" src="./images/opera.png" alt="" />
+      </div>
+
       <Canvas id='canvas-elem' style={{
         height: "100vh",
         width: "100vw",
@@ -95,37 +106,37 @@ const App = () => {
         <h6>Featured Projects</h6>
         <div className="titles">
 
-          <div className="title">
+          <div img-title="tomorrowland" className="title">
             <small>2020 - Ongoing</small>
             <h1>Tomorrowland</h1>
           </div>
 
-          <div className="title">
+          <div img-title="navy-pier" className="title">
             <small>2018 - Today</small>
             <h1>Navy Pier</h1>
           </div>
 
-          <div className="title">
+          <div img-title="msi-chicago" className="title">
             <small>2015 - Today</small>
             <h1>MSI Chicago</h1>
           </div>
 
-          <div className="title">
+          <div img-title="phone" className="title">
             <small>2016</small>
             <h1>This Was Louises Phone</h1>
           </div>
 
-          <div className="title">
+          <div img-title="kikk" className="title">
             <small>2018 - Today</small>
             <h1>KIKK Festival 2018</h1>
           </div>
 
-          <div className="title">
+          <div img-title="kennedy" className="title">
             <small>2017</small>
             <h1>The Kennedy Center</h1>
           </div>
 
-          <div className="title">
+          <div img-title="opera" className="title">
             <small>2016 - Ongoing</small>
             <h1>Royal Opera Of Wallonia</h1>
           </div>

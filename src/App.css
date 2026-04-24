@@ -1,16 +1,16 @@
 @font-face {
     font-family: f1;
-    src: url(/fonts/GTSectraDisplay-Regular.woff2);
+    src: url("./fonts/GTSectraDisplay-Regular.woff2");
 }
 
 @font-face {
     font-family: f2;
-    src: url(/fonts/Heebo-Regular.woff2);
+    src: url("./fonts/Heebo-Regular.woff2");
 }
 
 @font-face {
     font-family: f3;
-    src: url(/fonts/Heebo-Thin.woff2);
+    src: url('./fonts/Heebo-Thin.woff2');
 }
 
 * {
@@ -38,7 +38,7 @@ main{
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: url('/background-l.png');
+    background-image: url('./background-l.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -223,4 +223,58 @@ section{
 
 main:has(#section2 .title:hover) #canvas-elem::after{
     opacity: 0;
+}
+
+.images{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;            
+        transition: all linear 0.3s;
+    }
+}
+
+main:has(#section2 .title[img-title="tomorrowland"]:hover) .images img#tomorrowland{
+    opacity: 1;
+    background-color: #091227;
+}
+
+main:has(#section2 .title[img-title="navy-pier"]:hover) .images img#navy-pier{
+    opacity: 1;
+    background-color: #030828;
+}
+
+main:has(#section2 .title[img-title="msi-chicago"]:hover) .images img#msi-chicago{
+    opacity: 1;
+    background-color: #040E26;
+}
+
+main:has(#section2 .title[img-title="phone"]:hover) .images img#phone{
+    opacity: 1;
+    background-color: #152238;
+}
+
+main:has(#section2 .title[img-title="kikk"]:hover) .images img#kikk{
+    opacity: 1;
+    background-color: #090F74;
+}
+
+main:has(#section2 .title[img-title="kennedy"]:hover) .images img#kennedy{
+    opacity: 1;
+    background-color: #0A2534;
+}
+
+main:has(#section2 .title[img-title="opera"]:hover) .images img#opera{
+    opacity: 1;
+    background-color: #660000;
 }

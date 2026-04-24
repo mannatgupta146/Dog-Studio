@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Dog = () => {
 
-  const model = useGLTF('/model/dog.drc.glb')
+  const model = useGLTF('./model/dog.drc.glb')
 
   useThree(({camera, scene, gl}) => {
     camera.position.z = 0.35,
@@ -30,14 +30,14 @@ const Dog = () => {
   }, [actions])
   
 
-  const [normalMap, sampleMatCap] = useTexture(["/dog_normals.jpg", "/matcap/mat-2.png"])
+  const [normalMap, sampleMatCap] = useTexture(["./dog_normals.jpg", "./matcap/mat-2.png"])
   .map(texture=> {
     texture.flipY = false
     texture.colorSpace = THREE.SRGBColorSpace
     return texture
   })
 
-  const [branchMap, branchNormalMap] = useTexture(["/branches_diffuse.jpeg", "/branches_normals.jpeg"])
+  const [branchMap, branchNormalMap] = useTexture(["./branches_diffuse.jpeg", "./branches_normals.jpeg"])
   .map(texture=> {
     texture.colorSpace = THREE.SRGBColorSpace
     return texture
