@@ -44,6 +44,10 @@ section{
         padding: 3rem 2.5rem;
 
         .nav-elem:nth-child(2){
+            h5{
+                font-weight: 500;
+            }
+            transform: translateX(-7.1rem);
             i{
                 color: red;
             }
@@ -124,7 +128,7 @@ section{
         position: absolute;
         width: 35rem;
         height: 1px;
-        background-color: #a83d3d;
+        background-color: rgba(255, 0, 0, 0.318);
         transform: rotate(45deg) translate(0, -7rem);
     }
 
@@ -132,9 +136,9 @@ section{
         position: absolute;
         width: 10rem;
         height: 1px;
-        background-color: #a83d3d;
+        background-color: rgba(255, 0, 0, 0.318);
         transform: rotate(-45deg);
         top: 30%;
-        right: 20%;
+        right: 15%;
     }
 }
