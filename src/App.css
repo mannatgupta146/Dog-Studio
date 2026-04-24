@@ -8,6 +8,11 @@
     src: url(/fonts/Heebo-Regular.woff2);
 }
 
+@font-face {
+    font-family: f3;
+    src: url(/fonts/Heebo-Thin.woff2);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -130,10 +135,11 @@ section{
 
     .first-line{
         position: absolute;
-        width: 35rem;
+        width: 40rem;
         height: 1px;
         background-color: rgba(255, 0, 0, 0.318);
-        transform: rotate(45deg) translate(0, -7rem);
+        transform: rotate(45deg);
+        top: 60%;
     }
 
     .second-line{
@@ -144,5 +150,48 @@ section{
         transform: rotate(-45deg);
         top: 30%;
         right: 15%;
+    }
+
+    
+}
+
+#section2{
+    font-family: f3;
+
+    h6{
+        padding-left: 15rem;
+        letter-spacing: 0.2rem;
+        font-family: f1;
+        text-transform: uppercase;
+        opacity: 0.4;
+    }
+
+    .titles{
+        display: flex;
+        flex-direction: column;
+        padding-left: 5rem;
+
+        .title{
+            display: flex;
+            gap: 3rem;
+            padding-block: 1rem;
+
+            small{
+                margin-top: 0.6rem;
+                font-family: f2;
+                font-size: 0.6rem;
+                font-weight: 800;
+                opacity: 0.4;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+            }
+
+            h1{
+                font-size: 5rem;
+                font-weight: 100;
+                line-height: 1;
+                opacity: 0.4;
+            }
+        }
     }
 }

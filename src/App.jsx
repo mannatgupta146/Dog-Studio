@@ -95,7 +95,47 @@ const App = () => {
 
       </section>
 
-      <section id="section2"><h1>Section 2</h1></section>
+      <section id="section2">
+        <h6>Featured Projects</h6>
+        <div className="titles">
+
+          <div className="title">
+            <small>2020 - Ongoing</small>
+            <h1>Tomorrowland</h1>
+          </div>
+
+          <div className="title">
+            <small>2018 - Today</small>
+            <h1>Navy Pier</h1>
+          </div>
+
+          <div className="title">
+            <small>2015 - Today</small>
+            <h1>MSI Chicago</h1>
+          </div>
+
+          <div className="title">
+            <small>2016</small>
+            <h1>This Was Louises Phone</h1>
+          </div>
+
+          <div className="title">
+            <small>2018 - Today</small>
+            <h1>KIKK Festival 2018</h1>
+          </div>
+
+          <div className="title">
+            <small>2017</small>
+            <h1>The Kennedy Center</h1>
+          </div>
+
+          <div className="title">
+            <small>2016 - Ongoing</small>
+            <h1>Royal Opera Of Wallonia</h1>
+          </div>
+
+        </div>
+      </section>
 
       <section id="section3"><h1>Section 3</h1></section>
       
