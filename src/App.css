@@ -174,11 +174,14 @@ section{
         flex-direction: column;
         padding-left: 3rem;
         gap: 2rem;
+        cursor: pointer;
 
         .title{
             display: flex;
             gap: 6rem;
             padding-block: 1rem;
+            transition: all linear 0.3s;
+            opacity: 0.4;
 
             small{
                 min-width: 8rem;
@@ -186,7 +189,6 @@ section{
                 font-family: f2;
                 font-size: 0.6rem;
                 font-weight: 800;
-                opacity: 0.4;
                 text-transform: uppercase;
                 letter-spacing: 0.2rem;
             }
@@ -195,8 +197,11 @@ section{
                 font-size: 5rem;
                 font-weight: 100;
                 line-height: 1;
-                opacity: 0.4;
             }
+        }
+
+        .title:hover{
+            opacity: 1;
         }
     }
 }
