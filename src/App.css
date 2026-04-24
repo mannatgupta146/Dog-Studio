@@ -157,26 +157,31 @@ section{
 
 #section2{
     font-family: f3;
+    margin-top: 12rem;
 
     h6{
-        padding-left: 15rem;
-        letter-spacing: 0.2rem;
+        padding-left: 17rem;
+        letter-spacing: 0.25rem;
         font-family: f1;
+        font-size: 0.5rem;
         text-transform: uppercase;
         opacity: 0.4;
+        margin-bottom: 4rem;
     }
 
     .titles{
         display: flex;
         flex-direction: column;
-        padding-left: 5rem;
+        padding-left: 3rem;
+        gap: 2rem;
 
         .title{
             display: flex;
-            gap: 3rem;
+            gap: 6rem;
             padding-block: 1rem;
 
             small{
+                min-width: 8rem;
                 margin-top: 0.6rem;
                 font-family: f2;
                 font-size: 0.6rem;
