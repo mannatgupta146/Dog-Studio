@@ -8,17 +8,13 @@ const App = () => {
   return (
     <>
     <main>
-      <Canvas style={{
+      <Canvas id='canvas-elem' style={{
         height: "100vh",
         width: "100vw",
         position: "fixed",
         top: 0,
         left: 0,
         zIndex: 1,
-        backgroundImage: "url('/background-l.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
       }}>
 
         <Dog />
