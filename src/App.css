@@ -279,3 +279,54 @@ main:has(#section2 .title[img-title="opera"]:hover) .images img#opera{
     opacity: 1;
     background-color: #660000;
 }
+
+#section3{
+    padding-top: 5rem;
+    padding-inline: 15rem;
+    position: relative;
+    z-index: 0;
+    isolation: isolate;
+    min-height: initial;
+
+    .top{
+        display: flex;
+        width: 100%;
+    }
+
+    .top .left{
+       h3{
+        font-family: f1;
+        font-size: 3rem;
+        position: relative;
+        z-index: -10;
+       }
+    }
+}
+
+#section4{
+    padding-block: 5rem;
+    padding-inline: 17rem;
+    min-height: 70vh;
+
+    .bottom {
+        display: flex;
+        width: 100%;
+    }
+
+    .left, .right{
+        width: 50%;
+    }
+
+    .bottom .right{
+        display: flex;
+        gap: 4rem;
+
+        p{
+            opacity: 0.5;
+            font-weight: 300;
+            font-size: 0.9rem;
+            width: 40%;
+            line-height: 1.6;
+        }
+    }
+}
