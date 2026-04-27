@@ -8,13 +8,41 @@ const App = () => {
     <>
       <main>
         <div className="images">
-          <img id="tomorrowland" src="./images/tomorrowland.png" alt="" />
-          <img id="navy-pier" src="./images/navy-pier.png" alt="" />
-          <img id="msi-chicago" src="./images/msi-chicago.png" alt="" />
-          <img id="phone" src="./images/phone.png" alt="" />
-          <img id="kikk" src="./images/kikk.png" alt="" />
-          <img id="kennedy" src="./images/kennedy.png" alt="" />
-          <img id="opera" src="./images/opera.png" alt="" />
+          <img
+            id="tomorrowland"
+            src={`${import.meta.env.BASE_URL}images/tomorrowland.png`}
+            alt=""
+          />
+          <img
+            id="navy-pier"
+            src={`${import.meta.env.BASE_URL}images/navy-pier.png`}
+            alt=""
+          />
+          <img
+            id="msi-chicago"
+            src={`${import.meta.env.BASE_URL}images/msi-chicago.png`}
+            alt=""
+          />
+          <img
+            id="phone"
+            src={`${import.meta.env.BASE_URL}images/phone.png`}
+            alt=""
+          />
+          <img
+            id="kikk"
+            src={`${import.meta.env.BASE_URL}images/kikk.png`}
+            alt=""
+          />
+          <img
+            id="kennedy"
+            src={`${import.meta.env.BASE_URL}images/kennedy.png`}
+            alt=""
+          />
+          <img
+            id="opera"
+            src={`${import.meta.env.BASE_URL}images/opera.png`}
+            alt=""
+          />
         </div>
 
         <Canvas
