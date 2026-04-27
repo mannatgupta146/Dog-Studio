@@ -6,7 +6,11 @@ import { Canvas } from "@react-three/fiber"
 const App = () => {
   return (
     <>
-      <main>
+      <main
+        style={{
+          ["--main-bg"]: `url(${import.meta.env.BASE_URL}background-l.png)`,
+        }}
+      >
         <div className="images">
           <img
             id="tomorrowland"

@@ -165,7 +165,6 @@ const Dog = () => {
         endTrigger: "#section4",
         end: "bottom bottom",
         scrub: 1,
-        markers: true,
       },
     })
 
