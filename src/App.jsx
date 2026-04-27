@@ -47,6 +47,7 @@ const App = () => {
 
         <Canvas
           id="canvas-elem"
+          gl={{ alpha: true, antialias: true }}
           style={{
             height: "100vh",
             width: "100vw",
@@ -54,6 +55,7 @@ const App = () => {
             top: 0,
             left: 0,
             zIndex: 1,
+            background: "transparent",
           }}
         >
           <Dog />
