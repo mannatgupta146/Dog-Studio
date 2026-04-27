@@ -152,7 +152,7 @@ section{
         position: absolute;
         width: 40rem;
         height: 1px;
-        background-color: rgba(255, 0, 0, 0.318);
+        background-color: rgba(255, 0, 0, 0.611);
         transform: rotate(45deg);
         top: 60%;
     }
@@ -161,7 +161,7 @@ section{
         position: absolute;
         width: 10rem;
         height: 1px;
-        background-color: rgba(255, 0, 0, 0.318);
+        background-color: rgba(255, 0, 0, 0.611);
         transform: rotate(-45deg);
         top: 30%;
         right: 15%;
@@ -328,5 +328,14 @@ main:has(#section2 .title[img-title="opera"]:hover) .images img#opera{
             width: 40%;
             line-height: 1.6;
         }
+    }
+
+    .first-line{
+        position: relative;
+        width: 25rem;
+        height: 1px;
+        background-color: rgba(255, 0, 0, 0.611);
+        transform: rotate(45deg);
+        top: 50%;
     }
 }

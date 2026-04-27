@@ -172,6 +172,7 @@ const App = () => {
             </p>
           </div>
         </div>
+        <div className="first-line"></div>
       </section>
       
     </main>
